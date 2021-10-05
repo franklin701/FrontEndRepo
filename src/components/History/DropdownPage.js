@@ -1,18 +1,18 @@
+import React, { Component } from 'react';
 
-import React, { Fragment } from "react";
-import { MDBBtn } from "mdbreact";
-const DropdownPage = () => {
-  return (
-    <Fragment>
-    <MDBBtn color="primary">Primary</MDBBtn>
-    <MDBBtn>Default</MDBBtn>
-    <MDBBtn color="secondary">Secondary</MDBBtn>
-    <MDBBtn color="success">Success</MDBBtn>
-    <MDBBtn color="info">Info</MDBBtn>
-    <MDBBtn color="warning">Warning</MDBBtn>
-    <MDBBtn color="danger">Danger</MDBBtn>
-  </Fragment>
-  );
+class DropdownPage extends Component {
+  render () {
+    return(
+      <div>
+        <select className="browser-default custom-select">
+          <option>Choose your option</option>
+          <option value="1">Option 1</option>
+          <option value="2">Option 2</option>
+          <option value="3">Option 3</option>
+        </select>
+      </div>
+    );
+  }
 }
 
 export default DropdownPage;

@@ -4,35 +4,47 @@ import { MDBTable, MDBTableBody, MDBTableHead } from 'mdbreact';
 const BasicTable = () => {
   return (
     <MDBTable>
-      <MDBTableHead>
-        <tr>
-          <th>#</th>
-          <th>First</th>
-          <th>Last</th>
-          <th>Handle</th>
-        </tr>
-      </MDBTableHead>
-      <MDBTableBody>
-        <tr>
-          <td>1</td>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>Larry</td>
-          <td>the Bird</td>
-          <td>@twitter</td>
-        </tr>
-      </MDBTableBody>
-    </MDBTable>
+    <MDBTableHead>
+      <tr>
+        <th>#</th>
+        <th>Account</th>
+        <th>Destination Account</th>
+        <th>Movement Type</th>
+        <th>Amount</th>
+        <th>Previus Balance</th>
+        <th>Balance</th>
+      </tr>
+    </MDBTableHead>
+    <MDBTableBody>
+      <tr>
+      <th>1</th>
+        <th>123456</th>
+        <th>999999</th>
+        <th>Income</th>
+        <th>$1,000</th>
+        <th>$10,000</th>
+        <th>$11,000</th>
+      </tr>
+      <tr>
+      <th>2</th>
+       <th>123456</th>
+        <th>999999</th>
+        <th>Expense</th>
+        <th>-$500</th>
+        <th>$10,000</th>
+        <th>$10,500</th>
+      </tr>
+      <tr>
+      <th>3</th>
+      <th>123456</th>
+        <th>999999</th>
+        <th>Income</th>
+        <th>$2,000</th>
+        <th>$10,500</th>
+        <th>$12,500</th>
+      </tr>
+    </MDBTableBody>
+  </MDBTable>
   );
 }
 

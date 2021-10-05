@@ -1,9 +1,19 @@
-import React from 'react';
+
 import { MDBCard, MDBCardTitle, MDBCardText, MDBContainer,MDBBtn  } from "mdbreact";
 //import Toggle from './Toggle/Toggle.js';
 import {  MDBRow, MDBCol } from "mdbreact";
+import Button from 'react-bootstrap/Button';
+import NewAccountModal from '../Account/NewAccountModal.js';
+import NewCategoryModal from '../Category/NewCategoryModal.js';
+//import NewCurrencyModal from '../Currency/NewCCurrencyModal.js';
+import NewTransactionModal from '../Transaction/NewTransactionModal.js';
 
+import React, { useState } from "react"
 const Dashboard = () => {
+  const [accountModalShow, setAccountModalShow] = useState(false);
+  const [currencyModalShow, setCurrencyModalShow] = useState(false);
+  const [categoryModalShow, setCategoryModalShow] = useState(false);
+  const [transactionModalShow, setTransactionModalShow] = useState(false);
 return (
   <>
   <MDBRow>
@@ -31,8 +41,10 @@ return (
       </div>
       <br/>
     <div className="flex-row">
-      <a href="#!">See history</a>
-      <a href="#!" style={{ marginLeft: "1.25rem" }}>Create movement</a>
+    <Button variant="success" onClick={() => setTransactionModalShow(true)}>Show Transactions</Button>
+  <NewTransactionModal show={transactionModalShow} onHide={() => setTransactionModalShow(false)} />
+      <Button variant="primary" onClick={() => setTransactionModalShow(true)}>New Movement</Button>
+  <NewTransactionModal show={transactionModalShow} onHide={() => setTransactionModalShow(false)} />
     </div>
   </MDBCard>
 </MDBContainer>
@@ -57,10 +69,14 @@ return (
       </div>
       <br/>
      
+    
     <div className="flex-row">
-      <a href="#!">See history</a>
-      <a href="#!" style={{ marginLeft: "1.25rem" }}>Create movement</a>
-     
+    <Button variant="success" onClick={() => setTransactionModalShow(true)}>
+      Show Transactions
+  </Button>
+  <NewAccountModal show={transactionModalShow} onHide={() => setTransactionModalShow(false)} />
+ <Button variant="primary" onClick={() => setTransactionModalShow(true)}>New Movement</Button>
+    <NewTransactionModal show={transactionModalShow} onHide={() => setTransactionModalShow(false)} />
 
    
     </div>
@@ -72,34 +88,34 @@ return (
    <MDBCol>
 <MDBContainer>
   <MDBCard className="card-body" style={{ width: "22rem", marginTop: "1rem" }}>
-    <MDBCardTitle>Create new Account</MDBCardTitle>
+    <MDBCardTitle>Account</MDBCardTitle>
     <MDBCardText>
-   
+    <Button variant="warning" onClick={() => setAccountModalShow(true)}>
+      New Account
+  </Button>
+  <NewAccountModal show={accountModalShow} onHide={() => setAccountModalShow(false)} />
     </MDBCardText>
-  
-     
-    <div className="flex-row">
-      <a href="#!" style={{ marginLeft: "1.25rem" }}>New Account</a>
-     
-
-   
-    </div>
   </MDBCard>
   <MDBCard className="card-body" style={{ width: "22rem", marginTop: "1rem" }}>
     <MDBCardTitle>Actual currency  $</MDBCardTitle>
     <MDBCardText>
+    <Button variant="warning" onClick={() => setCategoryModalShow(true)}>
+     Change Currency
+  </Button>
+  <NewAccountModal show={categoryModalShow} onHide={() => setCategoryModalShow(false)} />
     </MDBCardText>
-    <div className="flex-row">
-      <a href="#!" style={{ marginLeft: "1.25rem" }}>Change Currency</a>
-    </div>
   </MDBCard>
   <MDBCard className="card-body" style={{ width: "22rem", marginTop: "1rem" }}>
     <MDBCardTitle>Categories</MDBCardTitle>
     <MDBCardText>
+    <Button variant="warning" onClick={() => setCategoryModalShow(true)}>
+      New Category
+  </Button>
+  <NewCategoryModal show={categoryModalShow} onHide={() => setCategoryModalShow(false)} />
     </MDBCardText>
-    <div className="flex-row">
+    {/* <div className="flex-row">
       <a href="#!" style={{ marginLeft: "1.25rem" }}>Create New Category</a>
-    </div>
+    </div> */}
   </MDBCard>
 </MDBContainer>
    </MDBCol>
