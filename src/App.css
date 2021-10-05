@@ -107,4 +107,12 @@
   button.secondary:hover {
     background: #a8c787;
   }
+  .App {
+    text-align: center;
+  }
   
+  .stock-container {
+    padding-left: 3em;
+    padding-right: 3em;
+    margin-top: 3em;
+  }

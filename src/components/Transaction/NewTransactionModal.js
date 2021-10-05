@@ -54,4 +54,5 @@ function NewTransactionModal(props) {
       </Modal>
     );
   }
+  
   export default NewTransactionModal

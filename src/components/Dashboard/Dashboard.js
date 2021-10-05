@@ -7,18 +7,27 @@ import NewAccountModal from '../Account/NewAccountModal.js';
 import NewCategoryModal from '../Category/NewCategoryModal.js';
 //import NewCurrencyModal from '../Currency/NewCCurrencyModal.js';
 import NewTransactionModal from '../Transaction/NewTransactionModal.js';
-
+//import NewTransactionModal from '../Transaction/NewTransactionModal.js';
+import HistoryTransactionModal from '../Transaction/HistoryTransactionModal.js';
 import React, { useState } from "react"
+import Stocks from './Stocks.js';
+import "./Dashboard.css";
+
 const Dashboard = () => {
   const [accountModalShow, setAccountModalShow] = useState(false);
   const [currencyModalShow, setCurrencyModalShow] = useState(false);
   const [categoryModalShow, setCategoryModalShow] = useState(false);
   const [transactionModalShow, setTransactionModalShow] = useState(false);
+  const [historyTransactionModalShow, setHistoryTransactionModalShow] = useState(false);
 return (
   <>
+    <header className="headerfra">
+      <h2>Dashboard</h2>
+    </header>
   <MDBRow>
   <MDBCol>
     <img src="https://mdbootstrap.com/img/Others/documentation/img%20(75)-mini.jpg" alt="thumbnail" className="img-thumbnail" />
+  <Stocks/>
   </MDBCol>
  <MDBCol>
   <MDBContainer>
@@ -41,8 +50,8 @@ return (
       </div>
       <br/>
     <div className="flex-row">
-    <Button variant="success" onClick={() => setTransactionModalShow(true)}>Show Transactions</Button>
-  <NewTransactionModal show={transactionModalShow} onHide={() => setTransactionModalShow(false)} />
+    <Button variant="success" onClick={() => setHistoryTransactionModalShow(true)}>Show Transactions</Button>
+  <HistoryTransactionModal show={historyTransactionModalShow} onHide={() => setHistoryTransactionModalShow(false)} />
       <Button variant="primary" onClick={() => setTransactionModalShow(true)}>New Movement</Button>
   <NewTransactionModal show={transactionModalShow} onHide={() => setTransactionModalShow(false)} />
     </div>
