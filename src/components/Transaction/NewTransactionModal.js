@@ -11,7 +11,7 @@ function NewTransactionModal(props) {
       <Modal {...props} aria-labelledby="contained-modal-title-vcenter">
         <Modal.Header closeButton>
           <Modal.Title id="contained-modal-title-vcenter">
-        New Account Form......
+        New Transaction
           </Modal.Title>
         </Modal.Header>
         <Modal.Body className="show-grid">      
@@ -21,6 +21,15 @@ function NewTransactionModal(props) {
               <Form.Control type="text"  required/>
             </Form.Group>
             <Form.Group id="texts">
+              <Form.Label> Type</Form.Label>
+              <select className="form-control" id="exampleFormControlSelect1">
+      <option>Income</option>
+      <option>Expense</option>
+
+    </select>
+            </Form.Group>
+            
+            <Form.Group id="texts">
               <Form.Label>Destination Account Number</Form.Label>
               <Form.Control type="text"  required/>
             </Form.Group>
@@ -28,6 +37,10 @@ function NewTransactionModal(props) {
               <Form.Label> Amount $</Form.Label>
               <Form.Control type="text" required/>
             </Form.Group>
+
+
+
+
             <Form.Group id="texts">
               <Form.Label> Category</Form.Label>
               <select className="form-control" id="exampleFormControlSelect1">
@@ -38,9 +51,9 @@ function NewTransactionModal(props) {
       <option>Category 5</option>
     </select>
             </Form.Group>
-            <Form.Group id="comment">
+            <Form.Group id="comments">
               <Form.Label>Comment</Form.Label>
-              <Form.Control type="text" required/>
+              <Form.Control as="textarea" rows={3} required/>
             </Form.Group>
             <Button 
              
@@ -54,5 +67,5 @@ function NewTransactionModal(props) {
       </Modal>
     );
   }
-  
+
   export default NewTransactionModal

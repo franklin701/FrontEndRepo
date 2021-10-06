@@ -26,13 +26,14 @@ return (
     </header>
   <MDBRow>
   <MDBCol>
-    <img src="https://mdbootstrap.com/img/Others/documentation/img%20(75)-mini.jpg" alt="thumbnail" className="img-thumbnail" />
-  <Stocks/>
+    <img src="https://cdn.mos.cms.futurecdn.net/FYjFKKZ65KqMgGUo2EwWER-970-80.jpeg.webp" alt="thumbnail" className="img-thumbnail" />
+    <h2>Golden Bank</h2>
   </MDBCol>
- <MDBCol>
-  <MDBContainer>
-  
+ <MDBCol>    <Stocks/>
+  {/* <MDBContainer>
+ 
   <MDBCard className="card-body" style={{ width: "22rem", marginTop: "1rem" }}>
+  
     <MDBCardTitle>Account #999999 Balance</MDBCardTitle>
     <MDBCardText>
     <h1>Total $: 1,500</h1>
@@ -91,7 +92,8 @@ return (
     </div>
   </MDBCard>
 
-</MDBContainer>
+</MDBContainer> */}
+
    </MDBCol>
 
    <MDBCol>

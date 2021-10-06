@@ -19,7 +19,7 @@ function HistoryTransactionModal(props) {
     >
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
-          Modal heading
+          Account movements
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
